@@ -1,13 +1,35 @@
 {
-  // Editor
-  "editor.tabSize": 2,
+  // General settings
+  "editor.tabSize": 4,
+
   // Python related basics
   "terminal.integrated.env.osx": {
     "PYTHONPATH": "${workspaceFolder}"
   },
   "python.languageServer": "Pylance",
-  "python.formatting.provider": "black",
-  "python.linting.flake8Enabled": true,
+
+  // Hide Python temporary files
+  "files.exclude": {
+    "**/__pycache__/": true,
+    "**/.pytest_cache/": true
+  },
+
+  // Python formatting
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+  },
+  "flake8.args": [
+    "--max-line-length=79"
+  ],
+  "black-formatter.args": [
+    "--line-length=79"
+  ],
+  "editor.rulers": [
+    79
+  ],
+  
   // Enable pylance
   "python.analysis.typeCheckingMode": "basic",
 
@@ -16,5 +38,5 @@
   
   // Tests
   "python.testing.pytestArgs": ["./tests"],
-  "python.testing.pytestEnabled": true
+  "python.testing.pytestEnabled": true,
 }

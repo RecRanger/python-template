@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "Current File",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "stopOnEntry": true,
       "program": "${file}",
@@ -13,7 +13,7 @@
     },
     {
       "name": "Sample API",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "./app/main.py",
       "console": "integratedTerminal",
